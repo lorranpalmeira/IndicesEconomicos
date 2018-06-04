@@ -37,5 +37,18 @@ namespace IndicesAPITestes
             Assert.Equal(nomeIndice, indice.NomeIndice);
 
         }
+
+
+        [Fact]
+        public void GetIndiceTeste() {
+
+            var indice = new Indice();
+
+            var retMethod = new IndicesController();
+            var retorno = retMethod.GetIndice("CDI");
+            
+            Assert.Equal("CDI", retorno);
+        }
+
     }
 }

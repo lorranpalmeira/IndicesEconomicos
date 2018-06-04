@@ -31,8 +31,13 @@ namespace IndiceEconomicoAPI.Controllers
             string json = JsonConvert.SerializeObject(indice);
 
             return json;
+        }
 
-            
+        // GET api/indices/5
+        [HttpGet("{id}")]
+        public string GetIndice(string indice)
+        {
+            return indice;
         }
     }
 }
