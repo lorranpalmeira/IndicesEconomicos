@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using IndiceEconomicoAPI.Indices;
+﻿using IndiceEconomicoAPI.Indices;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System;
 
 namespace IndiceEconomicoAPI.Controllers
 {
@@ -29,7 +25,7 @@ namespace IndiceEconomicoAPI.Controllers
             {
                 NomeIndice = "CDI",
                 Taxa = 0.25,
-                Data = DateTime.Now.ToLocalTime()
+                Data = DateTime.Now
             };
 
             string json = JsonConvert.SerializeObject(indice);
