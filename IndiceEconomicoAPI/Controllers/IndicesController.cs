@@ -33,11 +33,11 @@ namespace IndiceEconomicoAPI.Controllers
             return json;
         }
 
-        // GET api/indices/5
-        [HttpGet("{id}")]
-        public string GetIndice(string indice)
+        // GET api/indices/GetIndice/m/igpm
+        [HttpGet("GetIndice/{tipo}/{nomeIndice}")]
+        public string GetIndice(string nomeIndice,string tipo )
         {
-            return indice;
+            return "Tipo: " + tipo +" - Indice:"+ nomeIndice;
         }
     }
 }

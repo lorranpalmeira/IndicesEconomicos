@@ -45,7 +45,7 @@ namespace IndicesAPITestes
             var indice = new Indice();
 
             var retMethod = new IndicesController();
-            var retorno = retMethod.GetIndice("CDI");
+            var retorno = retMethod.GetIndice("M","CDI");
             
             Assert.Equal("CDI", retorno);
         }
