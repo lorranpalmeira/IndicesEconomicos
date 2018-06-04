@@ -1,0 +1,11 @@
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\bin\Debug\netcoreapp2.0\IndiceEconomicoAPI.deps.json
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\bin\Debug\netcoreapp2.0\IndiceEconomicoAPI.runtimeconfig.json
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\bin\Debug\netcoreapp2.0\IndiceEconomicoAPI.runtimeconfig.dev.json
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\bin\Debug\netcoreapp2.0\IndiceEconomicoAPI.dll
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\bin\Debug\netcoreapp2.0\IndiceEconomicoAPI.pdb
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.csproj.CoreCompileInputs.cache
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.AssemblyInfoInputs.cache
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.AssemblyInfo.cs
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.dll
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.pdb
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.csprojAssemblyReference.cache

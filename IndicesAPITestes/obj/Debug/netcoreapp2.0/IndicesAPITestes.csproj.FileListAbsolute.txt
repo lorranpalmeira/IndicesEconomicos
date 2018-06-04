@@ -1,0 +1,17 @@
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\IndicesAPITestes.deps.json
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\IndicesAPITestes.runtimeconfig.json
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\IndicesAPITestes.runtimeconfig.dev.json
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\IndicesAPITestes.dll
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\IndicesAPITestes.pdb
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\IndiceEconomicoAPI.dll
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\bin\Debug\netcoreapp2.0\IndiceEconomicoAPI.pdb
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\obj\Debug\netcoreapp2.0\IndicesAPITestes.csprojAssemblyReference.cache
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\obj\Debug\netcoreapp2.0\IndicesAPITestes.csproj.CoreCompileInputs.cache
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\obj\Debug\netcoreapp2.0\IndicesAPITestes.AssemblyInfoInputs.cache
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\obj\Debug\netcoreapp2.0\IndicesAPITestes.AssemblyInfo.cs
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\obj\Debug\netcoreapp2.0\IndicesAPITestes.csproj.CopyComplete
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\obj\Debug\netcoreapp2.0\IndicesAPITestes.dll
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndicesAPITestes\obj\Debug\netcoreapp2.0\IndicesAPITestes.pdb
