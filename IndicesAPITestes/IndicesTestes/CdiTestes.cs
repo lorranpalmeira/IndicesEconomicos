@@ -23,5 +23,14 @@ namespace IndicesAPITestes.IndicesTestes
 
             Assert.Equal(nomeIndice, indice.NomeIndice);
         }
+
+
+        [Fact]
+        public void MediaCdi() {
+            var mediaCdi = new CdiController();
+            var resultado = mediaCdi.MediaCdi();
+
+            Assert.Equal("6,39",resultado);
+        }
     }
 }
