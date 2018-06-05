@@ -30,7 +30,7 @@ namespace IndicesAPITestes.IndicesTestes
             var mediaCdi = new CdiController();
             var resultado = mediaCdi.MediaCdi();
 
-            Assert.Equal("6,39",resultado);
+            Assert.Equal("6.39",resultado);
         }
     }
 }
