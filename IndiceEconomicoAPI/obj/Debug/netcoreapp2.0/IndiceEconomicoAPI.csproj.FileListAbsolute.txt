@@ -8,3 +8,4 @@ C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\D
 C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.AssemblyInfo.cs
 C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.dll
 C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.pdb
+C:\Users\lorran.palmeira\source\repos\IndicesEconomicos\IndiceEconomicoAPI\obj\Debug\netcoreapp2.0\IndiceEconomicoAPI.csprojAssemblyReference.cache
