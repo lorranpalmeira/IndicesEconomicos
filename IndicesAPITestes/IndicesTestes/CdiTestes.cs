@@ -2,8 +2,6 @@
 using IndiceEconomicoAPI.Indices;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace IndicesAPITestes.IndicesTestes
@@ -34,12 +32,26 @@ namespace IndicesAPITestes.IndicesTestes
         }
 
         [Fact]
-        public void MediaCdiIsInvalid()
+        public void MediaCdiIsLowerThenZero()
         {
             var mediaCdi = new CdiController();
             var resultado = mediaCdi.MediaCdi();
 
-            Assert.NotEqual("-1000000", resultado);
+            var validar = Convert.ToDouble(resultado) < 0.0 ? true : false;
+            
+            Assert.False(validar);
         }
+
+        [Fact]
+        public void MediaCdiIsGreaterThenZero()
+        {
+            var mediaCdi = new CdiController();
+            var resultado = mediaCdi.MediaCdi();
+
+            var validar = Convert.ToDouble(resultado) > 0.0 ? true : false;
+
+            Assert.True(validar);
+        }
+
     }
 }
