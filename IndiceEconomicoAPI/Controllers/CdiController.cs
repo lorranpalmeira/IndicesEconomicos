@@ -31,7 +31,7 @@ namespace IndiceEconomicoAPI.Controllers
         }
 
         [HttpGet("MediaCdi")]
-        public string MediaCdi()
+        public  string MediaCdi()
         {
             WebClient client = new WebClient();
             DateTime data = DateTime.Today.AddDays(-1);

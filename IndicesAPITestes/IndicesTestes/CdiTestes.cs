@@ -26,11 +26,20 @@ namespace IndicesAPITestes.IndicesTestes
 
 
         [Fact]
-        public void MediaCdi() {
+        public void MediaCdiIsValid() {
             var mediaCdi = new CdiController();
             var resultado = mediaCdi.MediaCdi();
 
             Assert.Equal("6.39",resultado);
+        }
+
+        [Fact]
+        public void MediaCdiIsInvalid()
+        {
+            var mediaCdi = new CdiController();
+            var resultado = mediaCdi.MediaCdi();
+
+            Assert.NotEqual("-1000000", resultado);
         }
     }
 }
