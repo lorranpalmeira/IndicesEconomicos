@@ -1,10 +1,23 @@
-﻿using System;
+﻿using IndiceEconomicoAPI.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 
 namespace IndicesAPITestes.IndicesTestes
 {
     public class MoedasTestes
     {
+
+        [Fact]
+        public void UsdBrlAgoraIsValid() {
+            var usdbrl = new MoedasController();
+
+            var ret = usdbrl.UsdBrlAgora();
+
+            var validar = Convert.ToDouble(ret) > 0 ? true : false;
+
+            Assert.True(validar);
+        }
     }
 }

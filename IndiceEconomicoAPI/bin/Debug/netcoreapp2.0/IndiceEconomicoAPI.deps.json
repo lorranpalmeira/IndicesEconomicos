@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "372e689cda1e8223a705ebe7d5eda8c8610c6e70"
+    "signature": "8a7fda9d2e498a568905ffdd5d026a890a53f7a0"
   },
   "compilationOptions": {
     "defines": [
@@ -23,6 +23,7 @@
     ".NETCoreApp,Version=v2.0": {
       "IndiceEconomicoAPI/1.0.0": {
         "dependencies": {
+          "JsonPointer": "1.0.10",
           "Microsoft.AspNetCore.All": "2.0.8",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.3",
@@ -33,6 +34,17 @@
         },
         "compile": {
           "IndiceEconomicoAPI.dll": {}
+        }
+      },
+      "JsonPointer/1.0.10": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/net461/JsonPointer.dll": {}
+        },
+        "compile": {
+          "lib/net461/JsonPointer.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -4169,6 +4181,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "JsonPointer/1.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oKjCozzqujq0FWE7Sv8imLyhrHmzfHelsGDhy49VmAZiVtg+B0nsyCMAljIIOK7GsCTsRwr0i9ZWyDD/vVpm6w==",
+      "path": "jsonpointer/1.0.10",
+      "hashPath": "jsonpointer.1.0.10.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "JsonPointer/1.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/net461/JsonPointer.dll": {}
+        },
+        "runtime": {
+          "lib/net461/JsonPointer.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -4936,6 +4948,17 @@
     }
   },
   "libraries": {
+    "JsonPointer/1.0.10": {
+      "sha512": "oKjCozzqujq0FWE7Sv8imLyhrHmzfHelsGDhy49VmAZiVtg+B0nsyCMAljIIOK7GsCTsRwr0i9ZWyDD/vVpm6w==",
+      "type": "package",
+      "path": "jsonpointer/1.0.10",
+      "files": [
+        "jsonpointer.1.0.10.nupkg.sha512",
+        "jsonpointer.nuspec",
+        "lib/net461/JsonPointer.dll",
+        "lib/net462/JsonPointer.dll"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -12980,6 +13003,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "JsonPointer >= 1.0.10",
       "Microsoft.AspNetCore.All >= 2.0.8",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3",
@@ -13027,6 +13051,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "JsonPointer": {
+            "target": "Package",
+            "version": "[1.0.10, )"
+          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.8, )"
@@ -13052,5 +13080,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JsonPointer 1.0.10' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JsonPointer",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }
