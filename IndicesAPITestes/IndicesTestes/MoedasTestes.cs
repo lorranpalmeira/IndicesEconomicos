@@ -10,7 +10,7 @@ namespace IndicesAPITestes.IndicesTestes
     {
 
         [Fact]
-        public void UsdBrlAgoraIsValid() {
+        public void UsdBrlAgoraIsGreaterThanZero() {
             var usdbrl = new MoedasController();
 
             var ret = usdbrl.UsdBrlAgora();
