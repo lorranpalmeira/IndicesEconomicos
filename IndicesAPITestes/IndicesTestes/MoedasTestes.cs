@@ -13,7 +13,7 @@ namespace IndicesAPITestes.IndicesTestes
         public void UsdBrlAgoraIsGreaterThanZero() {
             var usdbrl = new MoedasController();
 
-            var ret = usdbrl.UsdBrlAgora();
+            var ret = usdbrl.UsdBrl();
 
             var validar = Convert.ToDouble(ret) > 0 ? true : false;
 

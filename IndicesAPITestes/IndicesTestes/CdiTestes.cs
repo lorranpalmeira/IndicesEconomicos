@@ -20,7 +20,7 @@ namespace IndicesAPITestes.IndicesTestes
         public void CdiDiarioTeste() {
             var indice = new Indice();
             indice.NomeIndice = "CDIDiario";
-            //var getIndice = _controller;
+            
 
             var resultado = _controller.CdiDiario();
 
@@ -32,18 +32,20 @@ namespace IndicesAPITestes.IndicesTestes
 
 
         [Fact]
-        public void MediaCdiIsValid() {
-            //var mediaCdi = _controller;
-            //var resultado = mediaCdi.MediaCdi();
+        public void MediaCdiSizeIsValid() {
+
             var resultado = _controller.MediaCdi();
 
-            Assert.Equal("6.39",resultado);
+            var validar = Convert.ToDouble(resultado) > 0.0 ? true : false;
+
+            var size = resultado.Length > 3 &&  resultado.Length < 5 ? true : false;
+
+            Assert.True(size);
         }
 
         [Fact]
         public void MediaCdiIsLowerThenZero()
         {
-           // var mediaCdi = new CdiController();
             var resultado = _controller.MediaCdi();
 
             var validar = Convert.ToDouble(resultado) < 0.0 ? true : false;
@@ -54,7 +56,6 @@ namespace IndicesAPITestes.IndicesTestes
         [Fact]
         public void MediaCdiIsGreaterThenZero()
         {
-            //var mediaCdi = new CdiController();
             var resultado = _controller.MediaCdi();
 
             var validar = Convert.ToDouble(resultado) > 0.0 ? true : false;

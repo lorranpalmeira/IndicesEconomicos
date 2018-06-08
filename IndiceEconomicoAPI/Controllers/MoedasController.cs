@@ -19,8 +19,8 @@ namespace IndiceEconomicoAPI.Controllers
 
         //http://free.currencyconverterapi.com/api/v5/convert?q=USD_BRL&compact=y
 
-        [HttpGet("UsdBrlAgora")]
-        public string UsdBrlAgora() {
+        [HttpGet("UsdBrl")]
+        public string UsdBrl() {
 
             WebClient client = new WebClient();
             var ret = client.DownloadString("http://free.currencyconverterapi.com/api/v5/convert?q=USD_BRL&compact=y");
