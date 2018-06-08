@@ -4,6 +4,8 @@ using Newtonsoft.Json;
 using System;
 using System.Globalization;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace IndiceEconomicoAPI.Controllers
 {
@@ -35,8 +37,10 @@ namespace IndiceEconomicoAPI.Controllers
         {
             WebClient client = new WebClient();
             DateTime data = DateTime.Today.AddDays(-1);
-            
+           
+
             string dataFormatada = data.ToString("yyyyMMdd");
+            
             var _mediaCdi = client.DownloadString(@"ftp://ftp.cetip.com.br/MediaCDI/"+ dataFormatada + ".txt");
 
             _mediaCdi = _mediaCdi.Substring(5, 4);
