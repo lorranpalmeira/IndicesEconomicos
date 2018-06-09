@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace IndiceEconomicoAPI
 {
@@ -24,6 +25,10 @@ namespace IndiceEconomicoAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddSwaggerGen(c =>
+                c.SwaggerDoc("v1",new Info { Title="API Indices Economicos", Version="v1"})
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +40,16 @@ namespace IndiceEconomicoAPI
             }
 
             app.UseMvc();
+
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => 
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json","API IndicesEconomicos V1");
+            });
+            //Link Para ver interface gráfica
+            //http://localhost:64141/swagger/index.html
         }
     }
 }

@@ -12,10 +12,7 @@ namespace IndiceEconomicoAPI.Controllers
     [Route("api/[controller]")]
     public class MoedasController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+
 
         //http://free.currencyconverterapi.com/api/v5/convert?q=USD_BRL&compact=y
 

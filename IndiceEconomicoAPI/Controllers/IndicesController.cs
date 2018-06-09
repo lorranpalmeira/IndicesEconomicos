@@ -8,15 +8,14 @@ namespace IndiceEconomicoAPI.Controllers
     [Route("api/[controller]")]
     public class IndicesController : Controller
     {
+        /*
         public IActionResult Index()
         {
             return View();
         }
+        */
 
-        public IActionResult Cdi() {
-
-            return View();
-        }
+        
 
         [HttpGet("GetIndiceCdi")]
         public string GetIndiceCdiDiario()

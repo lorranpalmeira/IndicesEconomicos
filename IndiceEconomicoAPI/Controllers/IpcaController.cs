@@ -15,10 +15,6 @@ namespace IndiceEconomicoAPI.Controllers
     [Route("api/[controller]")]
     public class IpcaController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         [HttpGet("IpcaNumeroIndiceUltimoMes")]
         public string IpcaNumeroIndiceUltimoMes() {
