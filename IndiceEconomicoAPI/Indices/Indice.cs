@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +19,7 @@ namespace IndiceEconomicoAPI.Indices
             set { _id = ObjectId.Parse(value); }
         }
 
-
-
-        public DateTime Data { get; set; }
+        public string Data { get; set; }
 
         public string Periodicidade { get; set; }
 

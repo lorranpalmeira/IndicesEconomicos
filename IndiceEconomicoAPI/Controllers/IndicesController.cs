@@ -24,7 +24,7 @@ namespace IndiceEconomicoAPI.Controllers
             {
                
                 Valor = "0.25",
-                Data = DateTime.Now
+               
             };
 
             string json = JsonConvert.SerializeObject(indice);
