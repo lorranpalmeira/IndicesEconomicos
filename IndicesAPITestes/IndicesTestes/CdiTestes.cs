@@ -16,19 +16,7 @@ namespace IndicesAPITestes.IndicesTestes
             _controller = new CdiController();
         }
 
-        [Fact]
-        public void CdiDiarioTeste() {
-            var indice = new Indice();
-            indice.NomeIndice = "CDIDiario";
-            
-
-            var resultado = _controller.CdiDiario();
-
-            Indice i = JsonConvert.DeserializeObject<Indice>(resultado.ToString());
-            string nomeIndice = i.NomeIndice;
-
-            Assert.Equal(nomeIndice, indice.NomeIndice);
-        }
+       
 
 
         [Fact]

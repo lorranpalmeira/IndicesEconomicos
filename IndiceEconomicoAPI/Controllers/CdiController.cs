@@ -1,7 +1,10 @@
 ﻿using IndiceEconomicoAPI.Indices;
+using IndiceEconomicoAPI.MongoDriver;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Net;
 using System.Net.Http;
@@ -19,7 +22,7 @@ namespace IndiceEconomicoAPI.Controllers
         {
             Indice indice = new Indice()
             {
-                NomeIndice = "CDIDiario",
+               
                 Valor = "0.25",
                 Data = DateTime.Now
             };
@@ -47,6 +50,14 @@ namespace IndiceEconomicoAPI.Controllers
             var json = JsonConvert.SerializeObject(_mediaCdi);
 
             return _mediaCdi;
+        }
+
+        [HttpGet("Tudo")]
+        public JsonResult Tudo()
+        {
+            MongoDbContext dbContext = new MongoDbContext();
+            List<Cdi> listaNotas = dbContext.Notas.Find(m => true).ToList();
+            return Json(listaNotas);
         }
 
 

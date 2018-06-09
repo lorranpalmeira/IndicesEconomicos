@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using IndiceEconomicoAPI.Indices;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,14 +31,14 @@ namespace IndiceEconomicoAPI.MongoDriver
             }
         }
 
-        /*
-        public IMongoCollection<Nota> Notas
+        
+        public IMongoCollection<Cdi> Notas
         {
             get
             {
-                return _database.GetCollection<Nota>("Notas");
+                return _database.GetCollection<Cdi>("Cdi");
             }
         }
-        */
+        
     }
 }
