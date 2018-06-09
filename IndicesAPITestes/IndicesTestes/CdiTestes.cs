@@ -20,15 +20,17 @@ namespace IndicesAPITestes.IndicesTestes
 
 
         [Fact]
-        public void MediaCdiSizeIsValid() {
+        public void MediaCdiIsValid() {
 
-            var resultado = _controller.MediaCdi();
+            var resultado = _controller.MediaCdi().Value.ToString();
 
-            var validar = Convert.ToDouble(resultado) > 0.0 ? true : false;
+            var json = JsonConvert.DeserializeObject(resultado); 
 
-            var size = resultado.Length > 3 &&  resultado.Length < 5 ? true : false;
+            //var validar = Convert.ToDouble(resultado) > 0.0 ? true : false;
 
-            Assert.True(size);
+            //var size = resultado.Length > 3 &&  resultado.Length < 5 ? true : false;
+
+            Assert.True(false);
         }
 
         [Fact]

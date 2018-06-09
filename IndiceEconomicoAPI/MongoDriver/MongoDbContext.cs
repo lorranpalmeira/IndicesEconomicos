@@ -32,6 +32,7 @@ namespace IndiceEconomicoAPI.MongoDriver
         }
 
         
+
         public IMongoCollection<Cdi> Cdi
         {
             get
@@ -39,6 +40,13 @@ namespace IndiceEconomicoAPI.MongoDriver
                 return _database.GetCollection<Cdi>("Cdi");
             }
         }
-        
+
+        public IMongoCollection<Moedas> Moedas
+        {
+            get
+            {
+                return _database.GetCollection<Moedas>("Moedas");
+            }
+        }
     }
 }

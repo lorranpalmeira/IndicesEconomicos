@@ -28,8 +28,8 @@ namespace IndiceEconomicoAPI.Controllers
             return json;
         }
 
-        [HttpGet("MediaCdi")]
-        public  string MediaCdi()
+        [HttpGet("MediaCdiV2")]
+        public  string MediaCdiV2()
         {
             WebClient client = new WebClient();
             DateTime data = DateTime.Today.AddDays(-1);
@@ -56,8 +56,8 @@ namespace IndiceEconomicoAPI.Controllers
             return Json(listaMediaCdi);
         }
 
-        [HttpGet("MediaCdiV2")]
-        public JsonResult MediaCdiV2()
+        [HttpGet("MediaCdi")]
+        public JsonResult MediaCdi()
         {
             MongoDbContext dbContext = new MongoDbContext();
             //List<Cdi> mediaCdi = dbContext.Cdi.Find(m => m.Data == "20180608").ToList();
@@ -68,7 +68,7 @@ namespace IndiceEconomicoAPI.Controllers
                 select (x.Valor);
 
 
-            return Json(valor.SingleOrDefault());
+            return Json(valor);
         }
 
         [HttpGet("MediaCdiPeriodo/{d1}/{d2}")]
