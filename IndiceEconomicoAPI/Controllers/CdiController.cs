@@ -71,9 +71,9 @@ namespace IndiceEconomicoAPI.Controllers
             return Json(valor.SingleOrDefault());
         }
 
-        [HttpGet("MediaCdiPeriodo/{d1}")]
+        [HttpGet("MediaCdiPeriodo/{d1}/{d2}")]
         [HttpGet("MediaCdiPeriodo")]
-        public JsonResult MediaCdiPeriodo(string d1)
+        public JsonResult MediaCdiPeriodo(string d1, string d2)
         {
             MongoDbContext dbContext = new MongoDbContext();
             //List<Cdi> valores = dbContext.Cdi.Find(m => true).ToList();
@@ -81,12 +81,11 @@ namespace IndiceEconomicoAPI.Controllers
 
             var valores =
                 from x in dbContext.Cdi.Find(m => true).ToList()
-                where DateTime.ParseExact(x.Data, "dd/MM/yyyy", CultureInfo.InvariantCulture) > DateTime.ParseExact(d1, "ddMMyyyy", CultureInfo.InvariantCulture)
-                select (x.Valor );
-
-
-
-
+                where DateTime.ParseExact(x.Data, "dd/MM/yyyy", CultureInfo.InvariantCulture) >= DateTime.ParseExact(d1, "ddMMyyyy", CultureInfo.InvariantCulture)
+                &&
+                DateTime.ParseExact(x.Data, "dd/MM/yyyy", CultureInfo.InvariantCulture) <= DateTime.ParseExact(d2, "ddMMyyyy", CultureInfo.InvariantCulture)
+                select (new { x.Data, x.Valor });
+                
             return Json(valores);
         }
 
