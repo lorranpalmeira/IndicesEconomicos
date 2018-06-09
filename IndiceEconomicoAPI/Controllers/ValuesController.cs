@@ -52,7 +52,7 @@ namespace IndiceEconomicoAPI.Controllers
         public JsonResult GetIndiceCdi()
         {
             Indice indice = new Indice() {
-                NomeIndice="CDI", Taxa=0.25, Data= DateTime.Now.ToLocalTime()
+                NomeIndice="CDI", Valor="0.25", Data= DateTime.Now.ToLocalTime()
             };         
 
             return Json(indice);

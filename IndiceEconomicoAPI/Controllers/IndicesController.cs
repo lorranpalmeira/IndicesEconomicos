@@ -23,7 +23,7 @@ namespace IndiceEconomicoAPI.Controllers
             Indice indice = new Indice()
             {
                 NomeIndice = "CDI",
-                Taxa = 0.25,
+                Valor = "0.25",
                 Data = DateTime.Now
             };
 

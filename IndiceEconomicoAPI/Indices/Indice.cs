@@ -14,6 +14,6 @@ namespace IndiceEconomicoAPI.Indices
 
         public string Periodicidade { get; set; }
 
-        public double Taxa { get; set; }
+        public string Valor { get; set; }
     }
 }

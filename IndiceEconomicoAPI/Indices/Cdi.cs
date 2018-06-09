@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace IndiceEconomicoAPI.Indices
 {
-    public class Cdi
+    public class Cdi : Indice
     {
+
+        
     }
 }

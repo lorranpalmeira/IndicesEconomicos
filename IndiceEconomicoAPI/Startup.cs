@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IndiceEconomicoAPI.MongoDriver;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,10 @@ namespace IndiceEconomicoAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            MongoDbContext.ConnectionString = Configuration.GetSection("MongoConnection:ConnectionString").Value;
+            MongoDbContext.DatabaseName = Configuration.GetSection("MongoConnection:Database").Value;
+            MongoDbContext.IsSSL = Convert.ToBoolean(this.Configuration.GetSection("MongoConnection:IsSSL").Value);
             services.AddMvc();
 
             services.AddSwaggerGen(c =>
