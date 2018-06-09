@@ -32,7 +32,7 @@ namespace IndiceEconomicoAPI.MongoDriver
         }
 
         
-        public IMongoCollection<Cdi> Notas
+        public IMongoCollection<Cdi> Cdi
         {
             get
             {

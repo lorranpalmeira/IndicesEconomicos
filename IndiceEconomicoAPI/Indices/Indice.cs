@@ -21,6 +21,7 @@ namespace IndiceEconomicoAPI.Indices
         }
         */
 
+        
         public string Data { get; set; }
 
         public string Periodicidade { get; set; }

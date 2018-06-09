@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -51,8 +52,42 @@ namespace IndiceEconomicoAPI.Controllers
         public JsonResult ListaMediaCdi()
         {
             MongoDbContext dbContext = new MongoDbContext();
-            List<Cdi> listaMediaCdi = dbContext.Notas.Find(m => true).ToList();
+            List<Cdi> listaMediaCdi = dbContext.Cdi.Find(m => true).ToList();
             return Json(listaMediaCdi);
+        }
+
+        [HttpGet("MediaCdiV2")]
+        public JsonResult MediaCdiV2()
+        {
+            MongoDbContext dbContext = new MongoDbContext();
+            //List<Cdi> mediaCdi = dbContext.Cdi.Find(m => m.Data == "20180608").ToList();
+
+            var valor =
+                from x in dbContext.Cdi.Find(m => true).ToList()
+                where x.Data == DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy")
+                select (x.Valor);
+
+
+            return Json(valor.SingleOrDefault());
+        }
+
+        [HttpGet("MediaCdiPeriodo/{d1}")]
+        [HttpGet("MediaCdiPeriodo")]
+        public JsonResult MediaCdiPeriodo(string d1)
+        {
+            MongoDbContext dbContext = new MongoDbContext();
+            //List<Cdi> valores = dbContext.Cdi.Find(m => true).ToList();
+
+
+            var valores =
+                from x in dbContext.Cdi.Find(m => true).ToList()
+                where DateTime.ParseExact(x.Data, "dd/MM/yyyy", CultureInfo.InvariantCulture) > DateTime.ParseExact(d1, "ddMMyyyy", CultureInfo.InvariantCulture)
+                select (x.Valor );
+
+
+
+
+            return Json(valores);
         }
 
 
