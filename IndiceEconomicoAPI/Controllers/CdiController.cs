@@ -20,12 +20,7 @@ namespace IndiceEconomicoAPI.Controllers
         [HttpGet("CdiDiario")]
         public string CdiDiario()
         {
-            Indice indice = new Indice()
-            {
-               
-                Valor = "0.25",
-               
-            };
+            Indice indice = new Indice();
 
             string json = JsonConvert.SerializeObject(indice);
 
@@ -52,12 +47,12 @@ namespace IndiceEconomicoAPI.Controllers
             return _mediaCdi;
         }
 
-        [HttpGet("Tudo")]
-        public JsonResult Tudo()
+        [HttpGet("ListaMediaCdi")]
+        public JsonResult ListaMediaCdi()
         {
             MongoDbContext dbContext = new MongoDbContext();
-            List<Cdi> listaNotas = dbContext.Notas.Find(m => true).ToList();
-            return Json(listaNotas);
+            List<Cdi> listaMediaCdi = dbContext.Notas.Find(m => true).ToList();
+            return Json(listaMediaCdi);
         }
 
 

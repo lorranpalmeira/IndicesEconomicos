@@ -16,7 +16,7 @@ namespace IndiceEconomicoAPI.Controllers
         */
 
         
-
+        /*
         [HttpGet("GetIndiceCdi")]
         public string GetIndiceCdiDiario()
         {
@@ -38,5 +38,7 @@ namespace IndiceEconomicoAPI.Controllers
         {
             return "Tipo: " + tipo +" - Indice:"+ nomeIndice;
         }
+
+    */
     }
 }

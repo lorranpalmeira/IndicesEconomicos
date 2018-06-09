@@ -12,17 +12,19 @@ namespace IndiceEconomicoAPI.Indices
     {
         public ObjectId _id { get; set; }
 
+        /*
         [DataMember]
         public string MongoId
         {
             get { return _id.ToString(); }
             set { _id = ObjectId.Parse(value); }
         }
+        */
 
         public string Data { get; set; }
 
         public string Periodicidade { get; set; }
 
-        public string Valor { get; set; }
+        public double Valor { get; set; }
     }
 }

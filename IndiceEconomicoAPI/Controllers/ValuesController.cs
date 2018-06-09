@@ -15,6 +15,12 @@ namespace IndiceEconomicoAPI.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        [HttpGet("{id}")]
+        public string Get(int id)
+        {
+            return "Value: " + id;
+        }
+        /*
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -57,5 +63,6 @@ namespace IndiceEconomicoAPI.Controllers
 
             return Json(indice);
         }
+        */
     }
 }
