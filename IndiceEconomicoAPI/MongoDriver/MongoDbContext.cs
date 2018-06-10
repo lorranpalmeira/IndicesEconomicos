@@ -31,7 +31,15 @@ namespace IndiceEconomicoAPI.MongoDriver
             }
         }
 
-        
+        /*
+        public IMongoCollection<T> Query
+        {
+            get
+            {
+                return _database.GetCollection<T>(nameof(T));
+            }
+        }
+        */
 
         public IMongoCollection<Cdi> Cdi
         {
