@@ -1,5 +1,6 @@
 ﻿using IndiceEconomicoAPI.Indices;
 using IndiceEconomicoAPI.MongoDriver;
+using IndiceEconomicoAPI.Queries;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using Newtonsoft.Json;
@@ -59,6 +60,7 @@ namespace IndiceEconomicoAPI.Controllers
         [HttpGet("MediaCdi")]
         public JsonResult MediaCdi()
         {
+            /*
             MongoDbContext dbContext = new MongoDbContext();
             //List<Cdi> mediaCdi = dbContext.Cdi.Find(m => m.Data == "20180608").ToList();
 
@@ -66,6 +68,10 @@ namespace IndiceEconomicoAPI.Controllers
                 from x in dbContext.Cdi.Find(m => true).ToList()
                 where x.Data == DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy")
                 select (x.Valor);
+            */
+
+            var cdi = new CdiQueries();
+            var valor = cdi.CdiMedia();
 
 
             return Json(valor);
