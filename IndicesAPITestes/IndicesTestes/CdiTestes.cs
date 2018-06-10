@@ -34,7 +34,7 @@ namespace IndicesAPITestes.IndicesTestes
 
             var mock = new Mock<ICdiQueries>();
 
-            var valor = 7.11;
+            var valor = 7.11 ;
             mock.Setup(m => m.CdiMedia()).Returns(valor);
 
             var resultadoEsperado = mock.Object.CdiMedia();

@@ -24,9 +24,7 @@ namespace IndiceEconomicoAPI.Queries
                 where x.Data == DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy")
                 select (x.Valor);
 
-            var resultado = Convert.ToDouble(valor);
-
-            return resultado;
+            return valor.SingleOrDefault();
         }
 
 

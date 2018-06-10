@@ -7,7 +7,6 @@ namespace IndiceEconomicoAPI.Queries
 {
     public interface ICdiQueries
     {
-
         double CdiMedia();
     }
 }

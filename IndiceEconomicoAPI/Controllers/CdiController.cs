@@ -17,6 +17,13 @@ namespace IndiceEconomicoAPI.Controllers
     [Route("api/[controller]")]
     public class CdiController : Controller
     {
+
+        public ICdiQueries _cdi;
+
+        public CdiController()
+        {
+            _cdi = new CdiQueries();
+        }
         
 
         [HttpGet("CdiDiario")]
@@ -70,8 +77,8 @@ namespace IndiceEconomicoAPI.Controllers
                 select (x.Valor);
             */
 
-            var cdi = new CdiQueries();
-            var valor = cdi.CdiMedia();
+            
+            var valor = _cdi.CdiMedia();
 
 
             return Json(valor);
