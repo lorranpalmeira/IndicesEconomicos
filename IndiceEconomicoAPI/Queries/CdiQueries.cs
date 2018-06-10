@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IndiceEconomicoAPI.Queries
 {
-    public class CdiQueries 
+    public class CdiQueries : ICdiQueries
     {
 
         private MongoDbContext _dbContext ;

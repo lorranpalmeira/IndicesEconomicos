@@ -31,15 +31,14 @@ namespace IndicesAPITestes.IndicesTestes
             var cdi = new Cdi() {
                 Valor = 7.11
             };
-            
-            var mock = new Mock<Cdi>();
 
+            var mock = new Mock<ICdiQueries>();
 
-            //mock.Setup(m => m.Valor).Returns(7.11);
+            var valor = 7.11;
+            mock.Setup(m => m.CdiMedia()).Returns(valor);
 
-            var resultadoEsperado = 7.11;
-           
-            
+            var resultadoEsperado = mock.Object.CdiMedia();
+                      
 
             Assert.Equal(resultadoEsperado, cdi.Valor);
         }
