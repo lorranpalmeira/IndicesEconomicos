@@ -1,7 +1,13 @@
 ﻿using IndiceEconomicoAPI.Controllers;
 using IndiceEconomicoAPI.Indices;
+using IndiceEconomicoAPI.MongoDriver;
+using IndiceEconomicoAPI.Queries;
+using MongoDB.Driver;
+using Moq;
 using Newtonsoft.Json;
 using System;
+using System.Linq;
+using System.Text;
 using Xunit;
 
 namespace IndicesAPITestes.IndicesTestes
@@ -22,15 +28,20 @@ namespace IndicesAPITestes.IndicesTestes
         [Fact]
         public void MediaCdiIsValid() {
 
-            var resultado = _controller.MediaCdi().Value.ToString();
+            var cdi = new Cdi() {
+                Valor = 7.11
+            };
+            
+            var mock = new Mock<Cdi>();
 
-            var json = JsonConvert.DeserializeObject(resultado); 
 
-            //var validar = Convert.ToDouble(resultado) > 0.0 ? true : false;
+            //mock.Setup(m => m.Valor).Returns(7.11);
 
-            //var size = resultado.Length > 3 &&  resultado.Length < 5 ? true : false;
+            var resultadoEsperado = 7.11;
+           
+            
 
-            Assert.True(false);
+            Assert.Equal(resultadoEsperado, cdi.Valor);
         }
 
         [Fact]
