@@ -15,18 +15,9 @@ namespace IndicesAPITestes.IndicesTestes
     public class CdiTestes
     {
 
-        private CdiController _controller;
-
-        public CdiTestes()
-        {
-            _controller = new CdiController();
-        }
-
-       
-
 
         [Fact]
-        public void MediaCdiIsValid() {
+        public void MediaCdiTeste() {
 
             var cdi = new Cdi() {
                 Valor = 7.11
@@ -43,6 +34,7 @@ namespace IndicesAPITestes.IndicesTestes
             Assert.Equal(resultadoEsperado, cdi.Valor);
         }
 
+        /*
         [Fact]
         public void MediaCdiIsLowerThenZero()
         {
@@ -62,6 +54,8 @@ namespace IndicesAPITestes.IndicesTestes
 
             Assert.True(validar);
         }
+
+    */
 
     }
 }

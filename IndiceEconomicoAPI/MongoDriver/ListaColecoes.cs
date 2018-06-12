@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IndiceEconomicoAPI.MongoDriver
 {
-    public class ListaColecoes<T> : MongoDbContext
+    public class ListaColecoes<T> 
     {
 
         private IMongoDatabase _database { get; }

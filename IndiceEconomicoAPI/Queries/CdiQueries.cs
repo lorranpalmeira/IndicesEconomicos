@@ -1,4 +1,5 @@
-﻿using IndiceEconomicoAPI.MongoDriver;
+﻿using IndiceEconomicoAPI.Indices;
+using IndiceEconomicoAPI.MongoDriver;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;

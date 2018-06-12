@@ -59,7 +59,7 @@ namespace IndiceEconomicoAPI.Controllers
         [HttpGet("ListaMediaCdi")]
         public JsonResult ListaMediaCdi()
         {
-            MongoDbContext dbContext = new MongoDbContext();
+            var dbContext = new MongoDbContext();
             List<Cdi> listaMediaCdi = dbContext.Cdi.Find(m => true).ToList();
             return Json(listaMediaCdi);
         }
@@ -88,7 +88,7 @@ namespace IndiceEconomicoAPI.Controllers
         [HttpGet("MediaCdiPeriodo")]
         public JsonResult MediaCdiPeriodo(string d1, string d2)
         {
-            MongoDbContext dbContext = new MongoDbContext();
+            var dbContext = new MongoDbContext();
             //List<Cdi> valores = dbContext.Cdi.Find(m => true).ToList();
 
 

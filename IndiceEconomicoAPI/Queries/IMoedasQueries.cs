@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IndiceEconomicoAPI.Indices
+namespace IndiceEconomicoAPI.Queries
 {
-    public class Moedas : Indice
+    public interface IMoedasQueries
     {
+
+        double UsdBrl();
     }
 }

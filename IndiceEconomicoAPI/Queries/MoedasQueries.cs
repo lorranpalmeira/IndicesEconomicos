@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace IndiceEconomicoAPI.Queries
 {
-    public class MoedasQueries
+    public class MoedasQueries : IMoedasQueries
     {
 
         private MongoDbContext _dbContext;
@@ -20,16 +20,18 @@ namespace IndiceEconomicoAPI.Queries
             _dbContext = new MongoDbContext();
         }
 
-        public List<Moedas> UsdBrl() {
+        public double UsdBrl() {
 
-           var result = _dbContext.Moedas.Find(x => true).ToList();
+            //var result = _dbContext.Moedas.Find(x => true).ToList();
 
-            //var valor =
-             //   from x in _dbContext.Moedas.Find(m => true);
-               // where x. == DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy")
-               // select (x.);
+            var valor =
+               from x in _dbContext.Moedas.Find(m => true).ToList()
+               where x.Data == DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy")
+                select (x.Valor);
 
-            return result;
+            var resultado = valor.SingleOrDefault();
+
+            return resultado;
         }
 
     }

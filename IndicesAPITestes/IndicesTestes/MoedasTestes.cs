@@ -1,4 +1,7 @@
 ﻿using IndiceEconomicoAPI.Controllers;
+using IndiceEconomicoAPI.Indices;
+using IndiceEconomicoAPI.Queries;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,41 +12,28 @@ namespace IndicesAPITestes.IndicesTestes
     public class MoedasTestes
     {
 
-        private MoedasController _moedas;
-
-        public MoedasTestes()
-        {
-            _moedas = new MoedasController();
-        }
+        
 
         [Fact]
-        public void UsdBrlAgoraIsGreaterThanZero() {
-            
-            var ret = _moedas.UsdBrl();
+        public void UsdBrlTeste() {
 
-            var validar = Convert.ToDouble(ret) > 0 ? true : false;
+            var moedas = new Moedas()
+            {
+                Valor = 3.67
+            };
 
-            Assert.True(validar);
+
+            var mock = new Mock<IMoedasQueries>();
+
+            mock.Setup(m=> m.UsdBrl()).Returns(3.67);
+
+            var valorEsperado = mock.Object.UsdBrl();
+
+
+            Assert.Equal(valorEsperado, moedas.Valor);
         }
 
-        [Fact]
-        public void UsdBrlSizeIsValid()
-        {
-            var ret = _moedas.UsdBrl();
-
-            Assert.InRange(ret.Length, 8,8);
-
-            
-        }
-
-        [Fact]
-        public void UsdBrlShortSizeIsValid()
-        {
-            var ret = _moedas.UsdBrlShort();
-
-            Assert.InRange(ret.Length, 3, 5);
-            
-        }
+        
 
     }
 }

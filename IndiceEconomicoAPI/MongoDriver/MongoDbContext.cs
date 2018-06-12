@@ -40,6 +40,8 @@ namespace IndiceEconomicoAPI.MongoDriver
             }
         }
         */
+        
+        
 
         public IMongoCollection<Cdi> Cdi
         {

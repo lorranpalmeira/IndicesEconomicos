@@ -25,9 +25,9 @@ namespace IndiceEconomicoAPI.Controllers
         //http://free.currencyconverterapi.com/api/v5/convert?q=USD_BRL&compact=y
 
         [HttpGet("UsdBrl")]
-        public string UsdBrl() {
+        public JsonResult UsdBrl() {
 
-            
+            /*
             WebClient client = new WebClient();
             var ret = client.DownloadString("http://free.currencyconverterapi.com/api/v5/convert?q=USD_BRL&compact=y");
             
@@ -35,8 +35,11 @@ namespace IndiceEconomicoAPI.Controllers
             JObject rss = JObject.Parse(ret);
 
             string rssJson = (string)rss["USD_BRL"]["val"];
+            */
 
-            return rssJson;
+            var resultado = _moedas.UsdBrl();
+
+            return Json(resultado);
 
         }
 
