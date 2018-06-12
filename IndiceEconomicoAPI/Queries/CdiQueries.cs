@@ -13,9 +13,12 @@ namespace IndiceEconomicoAPI.Queries
 
         private MongoDbContext _dbContext ;
 
+        private ListaColecoes<Cdi> _dbContextCdi;
+
         public CdiQueries()
         {
             _dbContext = new MongoDbContext();
+            _dbContextCdi = new ListaColecoes<Cdi>();
         }
 
         public double CdiMedia() {
@@ -28,6 +31,17 @@ namespace IndiceEconomicoAPI.Queries
             return valor.SingleOrDefault();
         }
 
+
+        public double CdiMediaV2()
+        {
+
+            var valor =
+                from x in  _dbContextCdi.Query.Find(m => true).ToList() //_dbContext.Cdi.Find(m => true).ToList()
+                where x.Data == DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy")
+                select (x.Valor);
+
+            return valor.SingleOrDefault();
+        }
 
 
     }

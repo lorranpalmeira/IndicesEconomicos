@@ -39,6 +39,10 @@ namespace IndiceEconomicoAPI.Controllers
         [HttpGet("MediaCdiV2")]
         public  string MediaCdiV2()
         {
+
+            var _mediaCdi = JsonConvert.SerializeObject(_cdi.CdiMediaV2());
+
+            /*
             WebClient client = new WebClient();
             DateTime data = DateTime.Today.AddDays(-1);
            
@@ -52,6 +56,7 @@ namespace IndiceEconomicoAPI.Controllers
             _mediaCdi = _mediaCdi.StartsWith("0") ? _mediaCdi.Substring(1, 4) : _mediaCdi;
 
             var json = JsonConvert.SerializeObject(_mediaCdi);
+            */
 
             return _mediaCdi;
         }
