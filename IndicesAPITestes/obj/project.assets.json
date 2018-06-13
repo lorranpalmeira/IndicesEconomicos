@@ -14885,6 +14885,7 @@
       "IndiceEconomicoAPI >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 15.7.0",
       "Microsoft.NETCore.App >= 2.0.0",
+      "MongoDB.Driver >= 2.6.1",
       "Newtonsoft.Json >= 11.0.2",
       "xunit >= 2.3.1",
       "xunit.runner.visualstudio >= 2.3.1"
@@ -14943,6 +14944,10 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "MongoDB.Driver": {
+            "target": "Package",
+            "version": "[2.6.1, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

@@ -21,6 +21,8 @@ namespace IndiceEconomicoAPI.Queries
             _dbContextCdi = new ListaColecoes<Cdi>();
         }
 
+
+
         public double CdiMedia() {
 
             var valor =

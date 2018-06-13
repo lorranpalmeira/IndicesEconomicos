@@ -12,7 +12,7 @@ namespace IndiceEconomicoAPI.MongoDriver
         public static string ConnectionString { get; set; }
         public static string DatabaseName { get; set; }
         public static bool IsSSL { get; set; }
-        protected IMongoDatabase _database { get; }
+        public IMongoDatabase _database { get; }
         public MongoDbContext()
         {
             try

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 
 namespace IndiceEconomicoAPI.Controllers
 {
@@ -24,6 +25,8 @@ namespace IndiceEconomicoAPI.Controllers
         {
             _cdi = new CdiQueries();
         }
+
+ 
         
 
         [HttpGet("CdiDiario")]
@@ -70,23 +73,13 @@ namespace IndiceEconomicoAPI.Controllers
         }
 
         [HttpGet("MediaCdi")]
-        public JsonResult MediaCdi()
+        public async Task<IActionResult> MediaCdi()
         {
-            /*
-            MongoDbContext dbContext = new MongoDbContext();
-            //List<Cdi> mediaCdi = dbContext.Cdi.Find(m => m.Data == "20180608").ToList();
-
-            var valor =
-                from x in dbContext.Cdi.Find(m => true).ToList()
-                where x.Data == DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy")
-                select (x.Valor);
-            */
-
             
             var valor = _cdi.CdiMedia();
 
 
-            return Json(valor);
+            return Ok(valor);
         }
 
         [HttpGet("MediaCdiPeriodo/{d1}/{d2}")]
